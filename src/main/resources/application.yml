@@ -1,0 +1,19 @@
+server:
+  servlet:
+    context-path: /bookstore/${application.api.version}
+  port: 8089
+
+application:
+  api:
+    version: v1
+
+spring:
+  data:
+    cassandra:
+      port: 9042
+      contact-points: 127.0.0.1
+      keyspace-name: book_store
+      schema-action: create_if_not_exists
+      username: cassandra
+      password: cassandra
+      entity-base-package: com.azamakram.github.springbootcassandradocker.model.entity
