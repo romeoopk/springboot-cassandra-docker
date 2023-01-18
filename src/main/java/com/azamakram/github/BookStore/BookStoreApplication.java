@@ -1,4 +1,4 @@
-package com.azamakram.github.springbootcassandradocker;
+package com.azamakram.github.BookStore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

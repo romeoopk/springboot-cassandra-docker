@@ -1,12 +1,12 @@
-package com.azamakram.github.springbootcassandradocker.service;
-
-import com.azamakram.github.springbootcassandradocker.model.entity.BookStoreEntity;
-import com.azamakram.github.springbootcassandradocker.model.input.BookStoreInput;
-import com.azamakram.github.springbootcassandradocker.model.output.BookStoreOutput;
+package com.azamakram.github.BookStore.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+
+import com.azamakram.github.BookStore.model.entity.BookStoreEntity;
+import com.azamakram.github.BookStore.model.input.BookStoreInput;
+import com.azamakram.github.BookStore.model.output.BookStoreOutput;
 
 public class ModelConverterUtil {
 

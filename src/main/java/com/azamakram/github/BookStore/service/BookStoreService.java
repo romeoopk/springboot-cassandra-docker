@@ -1,10 +1,10 @@
-package com.azamakram.github.springbootcassandradocker.service;
-
-import com.azamakram.github.springbootcassandradocker.model.input.BookStoreInput;
-import com.azamakram.github.springbootcassandradocker.model.output.BookStoreOutput;
+package com.azamakram.github.BookStore.service;
 
 import java.util.List;
 import java.util.UUID;
+
+import com.azamakram.github.BookStore.model.input.BookStoreInput;
+import com.azamakram.github.BookStore.model.output.BookStoreOutput;
 
 public interface BookStoreService {
     List<BookStoreOutput> getAllBookStores();

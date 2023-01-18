@@ -1,4 +1,4 @@
-package com.azamakram.github.springbootcassandradocker.model.output;
+package com.azamakram.github.BookStore.model.output;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

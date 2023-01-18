@@ -1,4 +1,4 @@
-package com.azamakram.github.springbootcassandradocker.model.exception;
+package com.azamakram.github.BookStore.model.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

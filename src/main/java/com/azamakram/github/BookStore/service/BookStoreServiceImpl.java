@@ -1,12 +1,13 @@
-package com.azamakram.github.springbootcassandradocker.service;
+package com.azamakram.github.BookStore.service;
 
-import com.azamakram.github.springbootcassandradocker.model.entity.BookStoreEntity;
-import com.azamakram.github.springbootcassandradocker.model.exception.BookNotFoundException;
-import com.azamakram.github.springbootcassandradocker.model.input.BookStoreInput;
-import com.azamakram.github.springbootcassandradocker.model.output.BookStoreOutput;
-import com.azamakram.github.springbootcassandradocker.repository.BookStoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.azamakram.github.BookStore.model.entity.BookStoreEntity;
+import com.azamakram.github.BookStore.model.exception.BookNotFoundException;
+import com.azamakram.github.BookStore.model.input.BookStoreInput;
+import com.azamakram.github.BookStore.model.output.BookStoreOutput;
+import com.azamakram.github.BookStore.repository.BookStoreRepository;
 
 import java.util.List;
 import java.util.UUID;
