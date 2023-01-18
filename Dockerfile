@@ -1,11 +1,9 @@
-FROM openjdk:12-jdk-alpine
+FROM eclipse-temurin:17-jdk-jammy
 
-EXPOSE 5557
+EXPOSE 8080
 
-VOLUME /tmp
+ADD build/libs/springboot-cassandra-docker-0.0.1-SNAPSHOT.jar /app/springboot-cassandra-docker.jar
 
-ADD springboot-cassandra-docker.jar app.jar
+WORKDIR /app/
 
-RUN bash -c 'touch /app.jar'
-
-ENTRYPOINT ["java","-jar","/app.jar"]
+CMD java -jar springboot-cassandra-docker.jar

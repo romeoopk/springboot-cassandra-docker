@@ -1,13 +1,13 @@
 server:
   servlet:
     context-path: /bookstore/v1
-  port: 8089
+  port: 9999
 
 spring:
   cassandra:
     port: 9042
     contact-points: 127.0.0.1
-    keyspace_name: book_store
+    keyspace_name: keyspace_bookstore
     schema-action: CREATE_IF_NOT_EXISTS
-    #uername: cassandra
-    # password: cassandra
+    password: cassandra
+    #username: cassandra

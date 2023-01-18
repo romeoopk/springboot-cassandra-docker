@@ -3,7 +3,7 @@ package com.azamakram.github.BookStore.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.azamakram.github.BookStore.model.entity.BookStoreEntity;
+import com.azamakram.github.BookStore.model.entity.BookStore;
 import com.azamakram.github.BookStore.model.exception.BookNotFoundException;
 import com.azamakram.github.BookStore.model.input.BookStoreInput;
 import com.azamakram.github.BookStore.model.output.BookStoreOutput;
@@ -36,8 +36,8 @@ public class BookStoreServiceImpl implements BookStoreService {
 
     @Override
     public BookStoreOutput saveBookStore(BookStoreInput input) {
-        BookStoreEntity entity = ModelConverterUtil.convertInputToEntity(input);
-        BookStoreEntity saved = bookStoreRepository.save(entity);
+        BookStore entity = ModelConverterUtil.convertInputToEntity(input);
+        BookStore saved = bookStoreRepository.save(entity);
         if(saved == null) {
             throw new NullPointerException();
         }

@@ -2,10 +2,14 @@ version: '3.9'
 
 services:
   cassandra:
-    image: cassandra:4.1.0
+    image: docker.io/bitnami/cassandra:latest
     ports:
-      - 9042:9042
+      - '7000:7000'
+      - '9042:9042'
     volumes:
-      - ~/apps/cassandra:/var/lib/cassandra
+      - './data/cassandra:/bitnami'
     environment:
-      - CASSANDRA_CLUSTER_NAME=cloudinfra
+      - CASSANDRA_HOST=127.0.0.1
+      - CASSANDRA_USERNAME=cassandra
+      - CASSANDRA_PASSWORD=cassandra
+

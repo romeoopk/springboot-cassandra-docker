@@ -23,8 +23,8 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table("book_store")
-public class BookStoreEntity {
+@Table("bookstore")
+public class BookStore {
 
     @PrimaryKeyColumn(name = "uuid", type = PrimaryKeyType.PARTITIONED)
     private UUID uuid;
