@@ -1,8 +1,11 @@
 server:
   servlet:
-    context-path: /bookstore/v1
+    context-path: /bookstore/${application.api.version}
   port: 9999
 
+application:
+  api:
+    version: v1
 spring:
   cassandra:
     port: 9042
@@ -10,4 +13,4 @@ spring:
     keyspace_name: keyspace_bookstore
     schema-action: CREATE_IF_NOT_EXISTS
     password: cassandra
-    #username: cassandra
+    username: cassandra

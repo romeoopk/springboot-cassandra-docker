@@ -6,10 +6,17 @@ services:
     ports:
       - '7000:7000'
       - '9042:9042'
-    volumes:
-      - './data/cassandra:/bitnami'
+    #volumes:
+     # - './data/cassandra:/bitnami'
     environment:
       - CASSANDRA_HOST=127.0.0.1
       - CASSANDRA_USERNAME=cassandra
       - CASSANDRA_PASSWORD=cassandra
+  bookstore-service:
+    image: bookstore-service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "9999:9999"
 

@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jdk-jammy
 
-EXPOSE 8080
+EXPOSE 9999
 
 ADD build/libs/springboot-cassandra-docker-0.0.1-SNAPSHOT.jar /app/springboot-cassandra-docker.jar
 
