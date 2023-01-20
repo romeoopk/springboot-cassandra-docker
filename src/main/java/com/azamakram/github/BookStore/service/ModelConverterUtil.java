@@ -21,7 +21,6 @@ public class ModelConverterUtil {
                 .uuid(entity.getUuid())
                 .title(entity.getTitle())
                 .writer(entity.getWriter())
-                .publishingDate(entity.getPublishingDate())
                 .build();
     }
 
@@ -31,7 +30,6 @@ public class ModelConverterUtil {
                 .uuid(input.getUuid())
                 .title(input.getTitle())
                 .writer(input.getWriter())
-                .publishingDate(input.getPublishingDate())
                 .build();
     }
 }

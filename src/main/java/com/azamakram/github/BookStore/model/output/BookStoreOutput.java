@@ -1,11 +1,5 @@
 package com.azamakram.github.BookStore.model.output;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 import lombok.Data;
@@ -24,8 +18,4 @@ public class BookStoreOutput {
     private String title;
 
     private String writer;
-
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    private LocalDateTime publishingDate;
 }

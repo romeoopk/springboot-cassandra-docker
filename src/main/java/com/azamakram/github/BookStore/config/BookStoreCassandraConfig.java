@@ -1,14 +1,11 @@
 package com.azamakram.github.BookStore.config;
 
-//import org.springframework.context.annotation.Bean;
-
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.cassandra.config.*;
+import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
+import org.springframework.data.cassandra.config.SchemaAction;
+import org.springframework.data.cassandra.config.CqlSessionFactoryBean;
 
 import org.springframework.context.annotation.Bean;
-//import org.springframework.data.cassandra.core.convert.CassandraConverter;
-//import org.springframework.data.cassandra.core.convert.MappingCassandraConverter;
-//import org.springframework.data.cassandra.core.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
@@ -49,29 +46,27 @@ public class BookStoreCassandraConfig extends AbstractCassandraConfiguration {
     @Override
     protected String getKeyspaceName() {
         return keySpace;
-    }  
+    }
 
-    /*@Override
+    @Override
     public SchemaAction getSchemaAction() {
         return SchemaAction.CREATE_IF_NOT_EXISTS;
-    }*/
+    }
 
-   /* @Override
+    @Override
     public String[] getEntityBasePackages() {
         return new String[]{"com.azamakram.github.BookStore.model.entity"};
-    }*/
+    }
 
 
     @Override
     protected List<CreateKeyspaceSpecification> getKeyspaceCreations() {
         return Collections.singletonList(CreateKeyspaceSpecification
-                .createKeyspace(getKeyspaceName())
-                .ifNotExists()
-                .with(KeyspaceOption.DURABLE_WRITES, true)
-                .withSimpleReplication());
+            .createKeyspace(getKeyspaceName())
+            .ifNotExists()
+            .with(KeyspaceOption.DURABLE_WRITES, true)
+            .withSimpleReplication());
     }
-    
-    //https://stackoverflow.com/questions/64910934/cassandra-authentication-issue-after-upgrading-to-spring-boot-2-3-5-release
 
     @Bean
     @Override
