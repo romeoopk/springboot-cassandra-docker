@@ -1,3 +1,5 @@
+// I would keep all the requests input/output directly under model dir but thats a side note :)
+
 package com.azamakram.github.BookStore.model.output;
 
 import java.util.UUID;
