@@ -1,3 +1,5 @@
+// usually exceptions can be in their own dir :)
+
 package com.azamakram.github.BookStore.model.exception;
 
 import org.springframework.http.HttpStatus;
