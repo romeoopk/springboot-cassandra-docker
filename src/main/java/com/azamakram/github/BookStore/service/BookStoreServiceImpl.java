@@ -18,6 +18,7 @@ public class BookStoreServiceImpl implements BookStoreService {
     @Autowired
     private BookStoreRepository bookStoreRepository;
 
+    // Autowiring could be done on constructor level rather field level
     public BookStoreServiceImpl(BookStoreRepository bookStoreRepository) {
         this.bookStoreRepository = bookStoreRepository;
     }
@@ -39,6 +40,7 @@ public class BookStoreServiceImpl implements BookStoreService {
         BookStore entity = ModelConverterUtil.convertInputToEntity(input);
         BookStore saved = bookStoreRepository.save(entity);
         if(saved == null) {
+            // element not found exception perhaps :) 
             throw new NullPointerException();
         }
         return ModelConverterUtil.convertEntityToOutput(saved);
@@ -47,12 +49,14 @@ public class BookStoreServiceImpl implements BookStoreService {
     @Override
     public BookStoreOutput updateBookStore(BookStoreInput input) {
         return ModelConverterUtil.convertEntityToOutput(
+            // exception could be thrown here as well
                 bookStoreRepository.save(
                         ModelConverterUtil.convertInputToEntity(input)));
     }
 
     @Override
     public void deleteBookStore(UUID uuid) {
+        // does this return a db status back? 
         bookStoreRepository.deleteById(uuid);
     }
 
