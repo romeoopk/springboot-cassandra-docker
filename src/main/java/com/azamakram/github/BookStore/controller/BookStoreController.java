@@ -49,6 +49,7 @@ public class BookStoreController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> saveBook(@Valid @RequestBody final BookStoreInput input) {
         logger.info("Saving book");
+        // appropriate HTTP status can be returned based on the verb :)
         return new ResponseEntity<>(bookStoreService.saveBookStore(input), HttpStatus.OK);
     }
 
